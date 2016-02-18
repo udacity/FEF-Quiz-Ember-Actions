@@ -1,1 +1,9 @@
+<h2>Cart</h2>
+
+<ul>
+  {{#each model as |cartItem|}}
+    <li>{{cartItem.color}} {{cartItem.size}} for {{cartItem.price}}</li>
+  {{/each}}
+</ul>
+
 {{outlet}}
