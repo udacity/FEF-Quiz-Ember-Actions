@@ -6,6 +6,7 @@ export default Ember.Route.extend({
 
   actions: {
     addToCart: function(color, size, price) {
+      this.get('warehouse').hold(color, size);
       this.get('shoppingCart').addToCart(color, size, price);
     }
   },
