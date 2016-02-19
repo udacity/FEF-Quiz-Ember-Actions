@@ -2,10 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   warehouse: Ember.inject.service('brick-warehouse'),
+  shoppingCart: Ember.inject.service('shopping-cart'),
 
   actions: {
     addToCart: function(color, size, price) {
-      console.log(color, size, price);
+      this.get('shoppingCart').addToCart(color, size, price);
     }
   },
 
